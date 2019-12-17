@@ -1,0 +1,15 @@
+Steps: ---
+1. Open Sql Server Management Studio.
+2. Connect SQL Server with credentials.
+3. Backup database.
+4. Run the below Query in Query Window
+ 
+ RESTORE DATABASE [PUB]
+ FROM DISK = N'E:\SQLServerBackup\PUB3_backup_2019_07_30_205624_2211634.bak'
+ WITH FILE = 1,
+ MOVE N'PUB3' TO N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER2014\MSSQL\DATA\PUB.mdf',
+ MOVE N'PUB3_log' TO N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER2014\MSSQL\DATA\PUB_log.ldf',
+ STATS = 1;
+ 
+ 
+ Video URL : https://chittranjanmahto.blogspot.com/2019/08/how-to-restore-sql-server-database.html
